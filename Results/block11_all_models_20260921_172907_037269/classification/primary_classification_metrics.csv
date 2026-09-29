@@ -1,0 +1,6 @@
+Analysis,Feature_set,Model,Primary_validation_selected,Rows,Composition_groups,Actual_low_count,Actual_high_count,Predicted_high_count,High_class_prevalence,TN,FP,FN,TP,Accuracy,Precision_high,Recall_high,F1_high,Precision_defined,Recall_defined,F1_defined,ROC_AUC,PR_AUC_trapezoidal,Average_precision,Curve_status
+comparison,A,Ridge,True,31,5,25,6,4,0.1935483870967742,25,0,2,4,0.9354838709677419,1.0,0.6666666666666666,0.8,True,True,True,1.0,1.0,1.0,Both actual classes present
+comparison,B,SVR,True,31,5,25,6,4,0.1935483870967742,25,0,2,4,0.9354838709677419,1.0,0.6666666666666666,0.8,True,True,True,1.0,1.0,1.0,Both actual classes present
+comparison,C,XGBoost,True,31,5,25,6,7,0.1935483870967742,24,1,0,6,0.967741935483871,0.8571428571428571,1.0,0.9230769230769231,True,True,True,1.0,1.0,1.0,Both actual classes present
+full,A,SVR,True,121,15,76,45,54,0.371900826446281,63,13,4,41,0.859504132231405,0.7592592592592593,0.9111111111111111,0.8282828282828283,True,True,True,0.9339181286549708,0.897926766620068,0.8991424615836624,Both actual classes present
+full,B,SVR,True,121,15,76,45,50,0.371900826446281,66,10,5,40,0.8760330578512396,0.8,0.8888888888888888,0.8421052631578947,True,True,True,0.9593567251461989,0.9406079911824331,0.9412142205743325,Both actual classes present

@@ -1,0 +1,11 @@
+{
+  "conductivity_threshold_S_cm": 0.01,
+  "log10_conductivity_threshold": -2.0,
+  "positive_class": "High conductivity",
+  "positive_rule": "Conductivity >= threshold",
+  "temperature_scope": "All available test temperatures",
+  "score_used_for_curves": "Predicted log10 conductivity",
+  "threshold_optimized": false,
+  "models_retrained": false,
+  "zero_division_policy": "Precision, recall and F1 use zero_division=0; undefined cases are flagged in the metrics table."
+}

@@ -1,0 +1,17 @@
+{
+  "candidate_run_id": "20260921_190141_482149",
+  "reliability_run_id": "20260921_185101_873995",
+  "analysis": "full",
+  "A_model": "SVR",
+  "B_model": "SVR",
+  "operating_temperature_K": 973.15,
+  "main_ranking": "Set B point prediction descending; bootstrap SD and descriptor distance used as tie-breakers",
+  "eligibility": "Passes Set B distance threshold, no raw input outside development min/max, finite linear conversion",
+  "shortlist_size_max": 20,
+  "one_schedule_per_shortlisted_composition": true,
+  "bootstrap_intervals_calibrated": false,
+  "phase_stability_verified": false,
+  "synthesis_feasibility_verified": false,
+  "test_data_used": false,
+  "models_retrained": false
+}

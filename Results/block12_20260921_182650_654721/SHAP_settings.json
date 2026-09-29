@@ -1,0 +1,12 @@
+{
+  "background_rows_max": 50,
+  "explained_rows_max": 100,
+  "permutation_cycles": 10,
+  "random_state": 42,
+  "sampling": "Uniform measurement-row sampling",
+  "data_scope": "Training plus validation only",
+  "test_data_used": false,
+  "models_retrained": false,
+  "display_units": "Original feature units; fitted imputation retained",
+  "interpretation": "Tree predictors: tree-path-dependent SHAP usingfitted development-data tree-path statistics.Model associations under interventional/independent feature masking; not causal effects."
+}

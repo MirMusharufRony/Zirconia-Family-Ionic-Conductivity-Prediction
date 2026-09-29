@@ -1,0 +1,27 @@
+{
+  "operating_temperature_K": 973.15,
+  "dopant_fraction_basis": "Fraction of total cations",
+  "dopant_fraction_grid": [
+    0.04,
+    0.08,
+    0.12,
+    0.16
+  ],
+  "maximum_total_dopant_fraction": 0.2,
+  "include_Y_only": true,
+  "include_Sc_only": true,
+  "include_Y_Sc_mixtures": true,
+  "include_known_compositions": true,
+  "assumed_valences": {
+    "Zr": 4,
+    "Y": 3,
+    "Sc": 3,
+    "O": -2
+  },
+  "formula_basis": "One total cation",
+  "processing_source": "Distinct complete schedules from full development data",
+  "candidate_phase_stability_verified": false,
+  "candidate_synthesis_feasibility_verified": false,
+  "physics_features_generated": false,
+  "predictions_generated": false
+}

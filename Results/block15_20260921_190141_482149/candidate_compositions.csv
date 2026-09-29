@@ -1,0 +1,19 @@
+candidate_composition_id,formula,composition_group,stabilizer_family,Zr_cation_fraction,Y_cation_fraction,Sc_cation_fraction,total_dopant_cation_fraction,nominal_oxygen_per_cation,known_composition_in_dataset,seen_in_full_development,phase_stability_verified,synthesis_feasibility_verified
+ZC0001,Zr0.96Sc0.04O1.98,Sc:0.0400000|Zr:0.9600000,Sc-stabilized,0.96,0.0,0.04,0.04,1.98,False,False,False,False
+ZC0002,Zr0.92Sc0.08O1.96,Sc:0.0800000|Zr:0.9200000,Sc-stabilized,0.92,0.0,0.08,0.08,1.96,False,False,False,False
+ZC0003,Zr0.88Sc0.12O1.94,Sc:0.1200000|Zr:0.8800000,Sc-stabilized,0.88,0.0,0.12,0.12,1.94,False,False,False,False
+ZC0004,Zr0.84Sc0.16O1.92,Sc:0.1600000|Zr:0.8400000,Sc-stabilized,0.84,0.0,0.16,0.16,1.92,False,False,False,False
+ZC0005,Zr0.96Y0.04O1.98,Y:0.0400000|Zr:0.9600000,Y-stabilized,0.96,0.04,0.0,0.04,1.98,True,True,False,False
+ZC0006,Zr0.92Y0.04Sc0.04O1.96,Sc:0.0400000|Y:0.0400000|Zr:0.9200000,Y-Sc co-stabilized,0.92,0.04,0.04,0.08,1.96,False,False,False,False
+ZC0007,Zr0.88Y0.04Sc0.08O1.94,Sc:0.0800000|Y:0.0400000|Zr:0.8800000,Y-Sc co-stabilized,0.88,0.04,0.08,0.12,1.94,False,False,False,False
+ZC0008,Zr0.84Y0.04Sc0.12O1.92,Sc:0.1200000|Y:0.0400000|Zr:0.8400000,Y-Sc co-stabilized,0.84,0.04,0.12,0.16,1.92,False,False,False,False
+ZC0009,Zr0.8Y0.04Sc0.16O1.9,Sc:0.1600000|Y:0.0400000|Zr:0.8000000,Y-Sc co-stabilized,0.8,0.04,0.16,0.2,1.9,False,False,False,False
+ZC0010,Zr0.92Y0.08O1.96,Y:0.0800000|Zr:0.9200000,Y-stabilized,0.92,0.08,0.0,0.08,1.96,True,False,False,False
+ZC0011,Zr0.88Y0.08Sc0.04O1.94,Sc:0.0400000|Y:0.0800000|Zr:0.8800000,Y-Sc co-stabilized,0.88,0.08,0.04,0.12,1.94,False,False,False,False
+ZC0012,Zr0.84Y0.08Sc0.08O1.92,Sc:0.0800000|Y:0.0800000|Zr:0.8400000,Y-Sc co-stabilized,0.84,0.08,0.08,0.16,1.92,True,True,False,False
+ZC0013,Zr0.8Y0.08Sc0.12O1.9,Sc:0.1200000|Y:0.0800000|Zr:0.8000000,Y-Sc co-stabilized,0.8,0.08,0.12,0.2,1.9,False,False,False,False
+ZC0014,Zr0.88Y0.12O1.94,Y:0.1200000|Zr:0.8800000,Y-stabilized,0.88,0.12,0.0,0.12,1.94,False,False,False,False
+ZC0015,Zr0.84Y0.12Sc0.04O1.92,Sc:0.0400000|Y:0.1200000|Zr:0.8400000,Y-Sc co-stabilized,0.84,0.12,0.04,0.16,1.92,False,False,False,False
+ZC0016,Zr0.8Y0.12Sc0.08O1.9,Sc:0.0800000|Y:0.1200000|Zr:0.8000000,Y-Sc co-stabilized,0.8,0.12,0.08,0.2,1.9,False,False,False,False
+ZC0017,Zr0.84Y0.16O1.92,Y:0.1600000|Zr:0.8400000,Y-stabilized,0.84,0.16,0.0,0.16,1.92,True,False,False,False
+ZC0018,Zr0.8Y0.16Sc0.04O1.9,Sc:0.0400000|Y:0.1600000|Zr:0.8000000,Y-Sc co-stabilized,0.8,0.16,0.04,0.2,1.9,False,False,False,False

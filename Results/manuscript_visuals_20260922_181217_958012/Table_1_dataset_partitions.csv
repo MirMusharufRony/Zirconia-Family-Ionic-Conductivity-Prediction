@@ -1,0 +1,7 @@
+Analysis,Partition,Rows,Rows (%),Composition groups,Source identifiers
+full,train,1222,82.4,117,39
+full,validation,140,9.44,15,12
+full,test,121,8.16,15,13
+comparison,train,578,89.06,50,31
+comparison,validation,40,6.16,6,4
+comparison,test,31,4.78,5,5

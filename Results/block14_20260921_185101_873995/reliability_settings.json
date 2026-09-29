@@ -1,0 +1,13 @@
+{
+  "bootstrap_models_per_pipeline": 30,
+  "bootstrap_unit": "Composition group",
+  "bootstrap_seed": 42,
+  "preprocessing_and_selection_refitted": true,
+  "hyperparameters_retuned": false,
+  "data_used": "Training plus validation",
+  "test_used": false,
+  "distance_space": "All nonconstant standardized inputs before SHAP selection",
+  "distance_reference": "Nearest other composition for each development row",
+  "distance_quantile": 0.95,
+  "uncertainty_interpretation": "Bootstrap model variability, conditional on selected model family and hyperparameters; not calibrated prediction intervals."
+}

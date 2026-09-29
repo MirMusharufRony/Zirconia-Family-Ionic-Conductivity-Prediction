@@ -1,0 +1,6 @@
+Analysis,Feature_set,Model,Validation_rows,Validation_groups,RMSE,MAE,R2,Mean_residual,Selection_rule
+comparison,A,Ridge,40,6,0.6899995191642387,0.5518503490965685,0.5816854044037532,-0.02366943778012322,Minimum validation RMSE; alphabetical model-name tie break
+comparison,B,SVR,40,6,0.6203120337892166,0.4769143121079664,0.6619150374053405,-0.11984052626454562,Minimum validation RMSE; alphabetical model-name tie break
+comparison,C,XGBoost,40,6,0.7416360766900916,0.5246562155532837,0.5167330031769997,-0.32184706833839416,Minimum validation RMSE; alphabetical model-name tie break
+full,A,SVR,140,15,0.4957780041795054,0.31998531760672844,0.8529395827081245,-0.11387515340033542,Minimum validation RMSE; alphabetical model-name tie break
+full,B,SVR,140,15,0.5690530631822949,0.35738914590172816,0.806256645348463,0.1551464802384881,Minimum validation RMSE; alphabetical model-name tie break

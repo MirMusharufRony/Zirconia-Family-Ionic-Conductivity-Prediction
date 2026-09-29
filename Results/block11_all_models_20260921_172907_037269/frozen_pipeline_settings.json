@@ -1,0 +1,2916 @@
+[
+  {
+    "analysis": "comparison",
+    "feature_set": "A",
+    "model": "ANN_MLP",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "MLPRegressor(alpha=np.float64(0.09609812947036396), hidden_layer_sizes=(64, 32),\n             max_fun=30000, max_iter=2000, random_state=42, solver='lbfgs')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "MLPRegressor(alpha=np.float64(0.09609812947036396), hidden_layer_sizes=(64, 32),\n             max_fun=30000, max_iter=2000, random_state=42, solver='lbfgs')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__activation": "relu",
+      "model__alpha": 0.09609812947036396,
+      "model__batch_size": "auto",
+      "model__beta_1": 0.9,
+      "model__beta_2": 0.999,
+      "model__early_stopping": false,
+      "model__epsilon": 1e-08,
+      "model__hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "model__learning_rate": "constant",
+      "model__learning_rate_init": 0.001,
+      "model__loss": "squared_error",
+      "model__max_fun": 30000,
+      "model__max_iter": 2000,
+      "model__momentum": 0.9,
+      "model__n_iter_no_change": 10,
+      "model__nesterovs_momentum": true,
+      "model__power_t": 0.5,
+      "model__random_state": 42,
+      "model__shuffle": true,
+      "model__solver": "lbfgs",
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": false,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "A",
+    "model": "ExtraTrees",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "ExtraTreesRegressor(max_depth=12, n_estimators=200, n_jobs=1, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "ExtraTreesRegressor(max_depth=12, n_estimators=200, n_jobs=1, random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": false,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": 12,
+      "model__max_features": 1.0,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 1,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "A",
+    "model": "GradientBoosting",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "GradientBoostingRegressor(learning_rate=np.float64(0.04407984038169244),\n                          max_depth=4, min_samples_leaf=10, n_estimators=200,\n                          random_state=42, subsample=0.7)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "GradientBoostingRegressor(learning_rate=np.float64(0.04407984038169244),\n                          max_depth=4, min_samples_leaf=10, n_estimators=200,\n                          random_state=42, subsample=0.7)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 0.9,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "deprecated",
+      "model__init": null,
+      "model__learning_rate": 0.04407984038169244,
+      "model__loss": "squared_error",
+      "model__max_depth": 4,
+      "model__max_features": null,
+      "model__max_leaf_nodes": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 10,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__n_estimators": 200,
+      "model__n_iter_no_change": null,
+      "model__random_state": 42,
+      "model__subsample": 0.7,
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "A",
+    "model": "KNN",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "KNeighborsRegressor(n_jobs=1, n_neighbors=3, weights='distance')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "KNeighborsRegressor(n_jobs=1, n_neighbors=3, weights='distance')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__algorithm": "auto",
+      "model__leaf_size": 30,
+      "model__metric": "minkowski",
+      "model__metric_params": null,
+      "model__n_jobs": 1,
+      "model__n_neighbors": 3,
+      "model__p": 2,
+      "model__weights": "distance"
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "A",
+    "model": "RandomForest",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "RandomForestRegressor(min_samples_leaf=2, n_estimators=200, n_jobs=1,\n                      random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "RandomForestRegressor(min_samples_leaf=2, n_estimators=200, n_jobs=1,\n                      random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": true,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": null,
+      "model__max_features": 1.0,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 2,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "A",
+    "model": "Ridge",
+    "primary_validation_selected": true,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "Ridge(alpha=np.float64(71.77141927992021))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "Ridge(alpha=np.float64(71.77141927992021))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 71.77141927992021,
+      "model__copy_X": true,
+      "model__fit_intercept": true,
+      "model__max_iter": null,
+      "model__positive": false,
+      "model__random_state": null,
+      "model__solver": "auto",
+      "model__tol": 0.0001
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "A",
+    "model": "SVR",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "SVR(C=np.float64(5.342937261279771), cache_size=512,\n    epsilon=np.float64(0.005265139631677754),\n    gamma=np.float64(0.0280163515871626))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "SVR(C=np.float64(5.342937261279771), cache_size=512,\n    epsilon=np.float64(0.005265139631677754),\n    gamma=np.float64(0.0280163515871626))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__C": 5.342937261279771,
+      "model__cache_size": 512,
+      "model__coef0": 0.0,
+      "model__degree": 3,
+      "model__epsilon": 0.005265139631677754,
+      "model__gamma": 0.0280163515871626,
+      "model__kernel": "rbf",
+      "model__max_iter": -1,
+      "model__shrinking": true,
+      "model__tol": 0.001,
+      "model__verbose": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "A",
+    "model": "XGBoost",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=0.7, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.025644046794293652), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=7, max_leaves=None,\n             min_child_weight=3, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=200, n_jobs=1,\n             num_parallel_tree=None, ...)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=0.7, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.025644046794293652), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=7, max_leaves=None,\n             min_child_weight=3, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=200, n_jobs=1,\n             num_parallel_tree=None, ...)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__objective": "reg:squarederror",
+      "model__base_score": null,
+      "model__booster": null,
+      "model__callbacks": null,
+      "model__colsample_bylevel": null,
+      "model__colsample_bynode": null,
+      "model__colsample_bytree": 0.7,
+      "model__device": null,
+      "model__early_stopping_rounds": null,
+      "model__enable_categorical": true,
+      "model__eval_metric": null,
+      "model__feature_types": null,
+      "model__feature_weights": null,
+      "model__gamma": null,
+      "model__grow_policy": null,
+      "model__importance_type": null,
+      "model__interaction_constraints": null,
+      "model__learning_rate": 0.025644046794293652,
+      "model__max_bin": null,
+      "model__max_cat_threshold": null,
+      "model__max_cat_to_onehot": null,
+      "model__max_delta_step": null,
+      "model__max_depth": 7,
+      "model__max_leaves": null,
+      "model__min_child_weight": 3,
+      "model__missing": NaN,
+      "model__monotone_constraints": null,
+      "model__multi_strategy": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__num_parallel_tree": null,
+      "model__random_state": 42,
+      "model__reg_alpha": null,
+      "model__reg_lambda": 0.5595986878006082,
+      "model__sampling_method": null,
+      "model__scale_pos_weight": null,
+      "model__subsample": 0.7,
+      "model__tree_method": "hist",
+      "model__validate_parameters": null,
+      "model__verbosity": 0
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "B",
+    "model": "ANN_MLP",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "MLPRegressor(alpha=np.float64(0.09609812947036396), hidden_layer_sizes=(64, 32),\n             max_fun=30000, max_iter=2000, random_state=42, solver='lbfgs')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "MLPRegressor(alpha=np.float64(0.09609812947036396), hidden_layer_sizes=(64, 32),\n             max_fun=30000, max_iter=2000, random_state=42, solver='lbfgs')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__activation": "relu",
+      "model__alpha": 0.09609812947036396,
+      "model__batch_size": "auto",
+      "model__beta_1": 0.9,
+      "model__beta_2": 0.999,
+      "model__early_stopping": false,
+      "model__epsilon": 1e-08,
+      "model__hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "model__learning_rate": "constant",
+      "model__learning_rate_init": 0.001,
+      "model__loss": "squared_error",
+      "model__max_fun": 30000,
+      "model__max_iter": 2000,
+      "model__momentum": 0.9,
+      "model__n_iter_no_change": 10,
+      "model__nesterovs_momentum": true,
+      "model__power_t": 0.5,
+      "model__random_state": 42,
+      "model__shuffle": true,
+      "model__solver": "lbfgs",
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": false,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "B",
+    "model": "ExtraTrees",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "ExtraTreesRegressor(min_samples_leaf=2, n_estimators=200, n_jobs=1,\n                    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "ExtraTreesRegressor(min_samples_leaf=2, n_estimators=200, n_jobs=1,\n                    random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": false,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": null,
+      "model__max_features": 1.0,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 2,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "B",
+    "model": "GradientBoosting",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "GradientBoostingRegressor(learning_rate=np.float64(0.04407984038169244),\n                          max_depth=4, min_samples_leaf=10, n_estimators=200,\n                          random_state=42, subsample=0.7)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "GradientBoostingRegressor(learning_rate=np.float64(0.04407984038169244),\n                          max_depth=4, min_samples_leaf=10, n_estimators=200,\n                          random_state=42, subsample=0.7)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 0.9,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "deprecated",
+      "model__init": null,
+      "model__learning_rate": 0.04407984038169244,
+      "model__loss": "squared_error",
+      "model__max_depth": 4,
+      "model__max_features": null,
+      "model__max_leaf_nodes": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 10,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__n_estimators": 200,
+      "model__n_iter_no_change": null,
+      "model__random_state": 42,
+      "model__subsample": 0.7,
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "B",
+    "model": "KNN",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "KNeighborsRegressor(n_jobs=1, n_neighbors=3, p=1, weights='distance')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "KNeighborsRegressor(n_jobs=1, n_neighbors=3, p=1, weights='distance')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__algorithm": "auto",
+      "model__leaf_size": 30,
+      "model__metric": "minkowski",
+      "model__metric_params": null,
+      "model__n_jobs": 1,
+      "model__n_neighbors": 3,
+      "model__p": 1,
+      "model__weights": "distance"
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "B",
+    "model": "RandomForest",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "RandomForestRegressor(max_features=0.8, min_samples_leaf=4, n_estimators=200,\n                      n_jobs=1, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "RandomForestRegressor(max_features=0.8, min_samples_leaf=4, n_estimators=200,\n                      n_jobs=1, random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": true,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": null,
+      "model__max_features": 0.8,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 4,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "B",
+    "model": "Ridge",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "Ridge(alpha=np.float64(46.19347374377384))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "Ridge(alpha=np.float64(46.19347374377384))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 46.19347374377384,
+      "model__copy_X": true,
+      "model__fit_intercept": true,
+      "model__max_iter": null,
+      "model__positive": false,
+      "model__random_state": null,
+      "model__solver": "auto",
+      "model__tol": 0.0001
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "B",
+    "model": "SVR",
+    "primary_validation_selected": true,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "SVR(C=np.float64(0.5415244119402537), cache_size=512,\n    epsilon=np.float64(0.005670807781371429),\n    gamma=np.float64(0.012561043700013555))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "SVR(C=np.float64(0.5415244119402537), cache_size=512,\n    epsilon=np.float64(0.005670807781371429),\n    gamma=np.float64(0.012561043700013555))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__C": 0.5415244119402537,
+      "model__cache_size": 512,
+      "model__coef0": 0.0,
+      "model__degree": 3,
+      "model__epsilon": 0.005670807781371429,
+      "model__gamma": 0.012561043700013555,
+      "model__kernel": "rbf",
+      "model__max_iter": -1,
+      "model__shrinking": true,
+      "model__tol": 0.001,
+      "model__verbose": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "B",
+    "model": "XGBoost",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=0.9, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.018891200276189388), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=7, max_leaves=None,\n             min_child_weight=1, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=200, n_jobs=1,\n             num_parallel_tree=None, ...)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=0.9, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.018891200276189388), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=7, max_leaves=None,\n             min_child_weight=1, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=200, n_jobs=1,\n             num_parallel_tree=None, ...)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__objective": "reg:squarederror",
+      "model__base_score": null,
+      "model__booster": null,
+      "model__callbacks": null,
+      "model__colsample_bylevel": null,
+      "model__colsample_bynode": null,
+      "model__colsample_bytree": 0.9,
+      "model__device": null,
+      "model__early_stopping_rounds": null,
+      "model__enable_categorical": true,
+      "model__eval_metric": null,
+      "model__feature_types": null,
+      "model__feature_weights": null,
+      "model__gamma": null,
+      "model__grow_policy": null,
+      "model__importance_type": null,
+      "model__interaction_constraints": null,
+      "model__learning_rate": 0.018891200276189388,
+      "model__max_bin": null,
+      "model__max_cat_threshold": null,
+      "model__max_cat_to_onehot": null,
+      "model__max_delta_step": null,
+      "model__max_depth": 7,
+      "model__max_leaves": null,
+      "model__min_child_weight": 1,
+      "model__missing": NaN,
+      "model__monotone_constraints": null,
+      "model__multi_strategy": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__num_parallel_tree": null,
+      "model__random_state": 42,
+      "model__reg_alpha": null,
+      "model__reg_lambda": 0.8179499475211672,
+      "model__sampling_method": null,
+      "model__scale_pos_weight": null,
+      "model__subsample": 0.9,
+      "model__tree_method": "hist",
+      "model__validate_parameters": null,
+      "model__verbosity": 0
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "C",
+    "model": "ANN_MLP",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "MLPRegressor(alpha=np.float64(0.09609812947036396), hidden_layer_sizes=(64, 32),\n             max_fun=30000, max_iter=2000, random_state=42, solver='lbfgs')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "MLPRegressor(alpha=np.float64(0.09609812947036396), hidden_layer_sizes=(64, 32),\n             max_fun=30000, max_iter=2000, random_state=42, solver='lbfgs')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__activation": "relu",
+      "model__alpha": 0.09609812947036396,
+      "model__batch_size": "auto",
+      "model__beta_1": 0.9,
+      "model__beta_2": 0.999,
+      "model__early_stopping": false,
+      "model__epsilon": 1e-08,
+      "model__hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "model__learning_rate": "constant",
+      "model__learning_rate_init": 0.001,
+      "model__loss": "squared_error",
+      "model__max_fun": 30000,
+      "model__max_iter": 2000,
+      "model__momentum": 0.9,
+      "model__n_iter_no_change": 10,
+      "model__nesterovs_momentum": true,
+      "model__power_t": 0.5,
+      "model__random_state": 42,
+      "model__shuffle": true,
+      "model__solver": "lbfgs",
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": false,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "C",
+    "model": "ExtraTrees",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "ExtraTreesRegressor(min_samples_leaf=2, n_estimators=200, n_jobs=1,\n                    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "ExtraTreesRegressor(min_samples_leaf=2, n_estimators=200, n_jobs=1,\n                    random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": false,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": null,
+      "model__max_features": 1.0,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 2,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "C",
+    "model": "GradientBoosting",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "GradientBoostingRegressor(learning_rate=np.float64(0.04407984038169244),\n                          max_depth=4, min_samples_leaf=10, n_estimators=200,\n                          random_state=42, subsample=0.7)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "GradientBoostingRegressor(learning_rate=np.float64(0.04407984038169244),\n                          max_depth=4, min_samples_leaf=10, n_estimators=200,\n                          random_state=42, subsample=0.7)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 0.9,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "deprecated",
+      "model__init": null,
+      "model__learning_rate": 0.04407984038169244,
+      "model__loss": "squared_error",
+      "model__max_depth": 4,
+      "model__max_features": null,
+      "model__max_leaf_nodes": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 10,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__n_estimators": 200,
+      "model__n_iter_no_change": null,
+      "model__random_state": 42,
+      "model__subsample": 0.7,
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "C",
+    "model": "KNN",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "KNeighborsRegressor(n_jobs=1, n_neighbors=11, weights='distance')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "KNeighborsRegressor(n_jobs=1, n_neighbors=11, weights='distance')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__algorithm": "auto",
+      "model__leaf_size": 30,
+      "model__metric": "minkowski",
+      "model__metric_params": null,
+      "model__n_jobs": 1,
+      "model__n_neighbors": 11,
+      "model__p": 2,
+      "model__weights": "distance"
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "C",
+    "model": "RandomForest",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "RandomForestRegressor(min_samples_leaf=2, n_estimators=200, n_jobs=1,\n                      random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "RandomForestRegressor(min_samples_leaf=2, n_estimators=200, n_jobs=1,\n                      random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": true,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": null,
+      "model__max_features": 1.0,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 2,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "C",
+    "model": "Ridge",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "Ridge(alpha=np.float64(6.4405075539937195))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "Ridge(alpha=np.float64(6.4405075539937195))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 6.4405075539937195,
+      "model__copy_X": true,
+      "model__fit_intercept": true,
+      "model__max_iter": null,
+      "model__positive": false,
+      "model__random_state": null,
+      "model__solver": "auto",
+      "model__tol": 0.0001
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "C",
+    "model": "SVR",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "SVR(C=np.float64(213.6832907235874), cache_size=512,\n    epsilon=np.float64(0.0033572967053517922),\n    gamma=np.float64(0.000533703276260396))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "SVR(C=np.float64(213.6832907235874), cache_size=512,\n    epsilon=np.float64(0.0033572967053517922),\n    gamma=np.float64(0.000533703276260396))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__C": 213.6832907235874,
+      "model__cache_size": 512,
+      "model__coef0": 0.0,
+      "model__degree": 3,
+      "model__epsilon": 0.0033572967053517922,
+      "model__gamma": 0.000533703276260396,
+      "model__kernel": "rbf",
+      "model__max_iter": -1,
+      "model__shrinking": true,
+      "model__tol": 0.001,
+      "model__verbose": false
+    }
+  },
+  {
+    "analysis": "comparison",
+    "feature_set": "C",
+    "model": "XGBoost",
+    "primary_validation_selected": true,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=0.9, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.018891200276189388), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=7, max_leaves=None,\n             min_child_weight=1, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=200, n_jobs=1,\n             num_parallel_tree=None, ...)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=0.9, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.018891200276189388), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=7, max_leaves=None,\n             min_child_weight=1, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=200, n_jobs=1,\n             num_parallel_tree=None, ...)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__objective": "reg:squarederror",
+      "model__base_score": null,
+      "model__booster": null,
+      "model__callbacks": null,
+      "model__colsample_bylevel": null,
+      "model__colsample_bynode": null,
+      "model__colsample_bytree": 0.9,
+      "model__device": null,
+      "model__early_stopping_rounds": null,
+      "model__enable_categorical": true,
+      "model__eval_metric": null,
+      "model__feature_types": null,
+      "model__feature_weights": null,
+      "model__gamma": null,
+      "model__grow_policy": null,
+      "model__importance_type": null,
+      "model__interaction_constraints": null,
+      "model__learning_rate": 0.018891200276189388,
+      "model__max_bin": null,
+      "model__max_cat_threshold": null,
+      "model__max_cat_to_onehot": null,
+      "model__max_delta_step": null,
+      "model__max_depth": 7,
+      "model__max_leaves": null,
+      "model__min_child_weight": 1,
+      "model__missing": NaN,
+      "model__monotone_constraints": null,
+      "model__multi_strategy": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__num_parallel_tree": null,
+      "model__random_state": 42,
+      "model__reg_alpha": null,
+      "model__reg_lambda": 0.8179499475211672,
+      "model__sampling_method": null,
+      "model__scale_pos_weight": null,
+      "model__subsample": 0.9,
+      "model__tree_method": "hist",
+      "model__validate_parameters": null,
+      "model__verbosity": 0
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "A",
+    "model": "ANN_MLP",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "MLPRegressor(activation='tanh', alpha=np.float64(0.9142349009056923),\n             hidden_layer_sizes=(32,), max_fun=30000, max_iter=2000,\n             random_state=42, solver='lbfgs')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "MLPRegressor(activation='tanh', alpha=np.float64(0.9142349009056923),\n             hidden_layer_sizes=(32,), max_fun=30000, max_iter=2000,\n             random_state=42, solver='lbfgs')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__activation": "tanh",
+      "model__alpha": 0.9142349009056923,
+      "model__batch_size": "auto",
+      "model__beta_1": 0.9,
+      "model__beta_2": 0.999,
+      "model__early_stopping": false,
+      "model__epsilon": 1e-08,
+      "model__hidden_layer_sizes": [
+        32
+      ],
+      "model__learning_rate": "constant",
+      "model__learning_rate_init": 0.001,
+      "model__loss": "squared_error",
+      "model__max_fun": 30000,
+      "model__max_iter": 2000,
+      "model__momentum": 0.9,
+      "model__n_iter_no_change": 10,
+      "model__nesterovs_momentum": true,
+      "model__power_t": 0.5,
+      "model__random_state": 42,
+      "model__shuffle": true,
+      "model__solver": "lbfgs",
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": false,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "A",
+    "model": "ExtraTrees",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "ExtraTreesRegressor(max_depth=12, n_estimators=200, n_jobs=1, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "ExtraTreesRegressor(max_depth=12, n_estimators=200, n_jobs=1, random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": false,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": 12,
+      "model__max_features": 1.0,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 1,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "A",
+    "model": "GradientBoosting",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "GradientBoostingRegressor(learning_rate=np.float64(0.06375859628711789),\n                          max_depth=4, min_samples_leaf=2, n_estimators=400,\n                          random_state=42, subsample=0.7)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "GradientBoostingRegressor(learning_rate=np.float64(0.06375859628711789),\n                          max_depth=4, min_samples_leaf=2, n_estimators=400,\n                          random_state=42, subsample=0.7)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 0.9,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "deprecated",
+      "model__init": null,
+      "model__learning_rate": 0.06375859628711789,
+      "model__loss": "squared_error",
+      "model__max_depth": 4,
+      "model__max_features": null,
+      "model__max_leaf_nodes": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 2,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__n_estimators": 400,
+      "model__n_iter_no_change": null,
+      "model__random_state": 42,
+      "model__subsample": 0.7,
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "A",
+    "model": "KNN",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "KNeighborsRegressor(n_jobs=1, n_neighbors=11, weights='distance')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "KNeighborsRegressor(n_jobs=1, n_neighbors=11, weights='distance')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__algorithm": "auto",
+      "model__leaf_size": 30,
+      "model__metric": "minkowski",
+      "model__metric_params": null,
+      "model__n_jobs": 1,
+      "model__n_neighbors": 11,
+      "model__p": 2,
+      "model__weights": "distance"
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "A",
+    "model": "RandomForest",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "RandomForestRegressor(max_depth=20, max_features=0.8, n_estimators=200,\n                      n_jobs=1, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "RandomForestRegressor(max_depth=20, max_features=0.8, n_estimators=200,\n                      n_jobs=1, random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": true,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": 20,
+      "model__max_features": 0.8,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 1,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "A",
+    "model": "Ridge",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "Ridge(alpha=np.float64(46.19347374377384))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "Ridge(alpha=np.float64(46.19347374377384))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 46.19347374377384,
+      "model__copy_X": true,
+      "model__fit_intercept": true,
+      "model__max_iter": null,
+      "model__positive": false,
+      "model__random_state": null,
+      "model__solver": "auto",
+      "model__tol": 0.0001
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "A",
+    "model": "SVR",
+    "primary_validation_selected": true,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "SVR(C=np.float64(5.342937261279771), cache_size=512,\n    epsilon=np.float64(0.005265139631677754),\n    gamma=np.float64(0.0280163515871626))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "SVR(C=np.float64(5.342937261279771), cache_size=512,\n    epsilon=np.float64(0.005265139631677754),\n    gamma=np.float64(0.0280163515871626))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__C": 5.342937261279771,
+      "model__cache_size": 512,
+      "model__coef0": 0.0,
+      "model__degree": 3,
+      "model__epsilon": 0.005265139631677754,
+      "model__gamma": 0.0280163515871626,
+      "model__kernel": "rbf",
+      "model__max_iter": -1,
+      "model__shrinking": true,
+      "model__tol": 0.001,
+      "model__verbose": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "A",
+    "model": "XGBoost",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=1.0, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.10872422452394664), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=5, max_leaves=None,\n             min_child_weight=7, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=200, n_jobs=1,\n             num_parallel_tree=None, ...)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=1.0, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.10872422452394664), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=5, max_leaves=None,\n             min_child_weight=7, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=200, n_jobs=1,\n             num_parallel_tree=None, ...)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__objective": "reg:squarederror",
+      "model__base_score": null,
+      "model__booster": null,
+      "model__callbacks": null,
+      "model__colsample_bylevel": null,
+      "model__colsample_bynode": null,
+      "model__colsample_bytree": 1.0,
+      "model__device": null,
+      "model__early_stopping_rounds": null,
+      "model__enable_categorical": true,
+      "model__eval_metric": null,
+      "model__feature_types": null,
+      "model__feature_weights": null,
+      "model__gamma": null,
+      "model__grow_policy": null,
+      "model__importance_type": null,
+      "model__interaction_constraints": null,
+      "model__learning_rate": 0.10872422452394664,
+      "model__max_bin": null,
+      "model__max_cat_threshold": null,
+      "model__max_cat_to_onehot": null,
+      "model__max_delta_step": null,
+      "model__max_depth": 5,
+      "model__max_leaves": null,
+      "model__min_child_weight": 7,
+      "model__missing": NaN,
+      "model__monotone_constraints": null,
+      "model__multi_strategy": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__num_parallel_tree": null,
+      "model__random_state": 42,
+      "model__reg_alpha": null,
+      "model__reg_lambda": 6.17377039470457,
+      "model__sampling_method": null,
+      "model__scale_pos_weight": null,
+      "model__subsample": 0.9,
+      "model__tree_method": "hist",
+      "model__validate_parameters": null,
+      "model__verbosity": 0
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "B",
+    "model": "ANN_MLP",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "MLPRegressor(alpha=np.float64(0.09609812947036396), hidden_layer_sizes=(64, 32),\n             max_fun=30000, max_iter=2000, random_state=42, solver='lbfgs')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "MLPRegressor(alpha=np.float64(0.09609812947036396), hidden_layer_sizes=(64, 32),\n             max_fun=30000, max_iter=2000, random_state=42, solver='lbfgs')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__activation": "relu",
+      "model__alpha": 0.09609812947036396,
+      "model__batch_size": "auto",
+      "model__beta_1": 0.9,
+      "model__beta_2": 0.999,
+      "model__early_stopping": false,
+      "model__epsilon": 1e-08,
+      "model__hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "model__learning_rate": "constant",
+      "model__learning_rate_init": 0.001,
+      "model__loss": "squared_error",
+      "model__max_fun": 30000,
+      "model__max_iter": 2000,
+      "model__momentum": 0.9,
+      "model__n_iter_no_change": 10,
+      "model__nesterovs_momentum": true,
+      "model__power_t": 0.5,
+      "model__random_state": 42,
+      "model__shuffle": true,
+      "model__solver": "lbfgs",
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": false,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "B",
+    "model": "ExtraTrees",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "ExtraTreesRegressor(max_depth=12, n_estimators=200, n_jobs=1, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "ExtraTreesRegressor(max_depth=12, n_estimators=200, n_jobs=1, random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": false,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": 12,
+      "model__max_features": 1.0,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 1,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 200,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "B",
+    "model": "GradientBoosting",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "GradientBoostingRegressor(learning_rate=np.float64(0.06375859628711789),\n                          max_depth=4, min_samples_leaf=2, n_estimators=400,\n                          random_state=42, subsample=0.7)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "GradientBoostingRegressor(learning_rate=np.float64(0.06375859628711789),\n                          max_depth=4, min_samples_leaf=2, n_estimators=400,\n                          random_state=42, subsample=0.7)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 0.9,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "deprecated",
+      "model__init": null,
+      "model__learning_rate": 0.06375859628711789,
+      "model__loss": "squared_error",
+      "model__max_depth": 4,
+      "model__max_features": null,
+      "model__max_leaf_nodes": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 2,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__n_estimators": 400,
+      "model__n_iter_no_change": null,
+      "model__random_state": 42,
+      "model__subsample": 0.7,
+      "model__tol": 0.0001,
+      "model__validation_fraction": 0.1,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "B",
+    "model": "KNN",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "KNeighborsRegressor(n_jobs=1, n_neighbors=3, p=1, weights='distance')"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "KNeighborsRegressor(n_jobs=1, n_neighbors=3, p=1, weights='distance')",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__algorithm": "auto",
+      "model__leaf_size": 30,
+      "model__metric": "minkowski",
+      "model__metric_params": null,
+      "model__n_jobs": 1,
+      "model__n_neighbors": 3,
+      "model__p": 1,
+      "model__weights": "distance"
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "B",
+    "model": "RandomForest",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "RandomForestRegressor(max_depth=20, max_features=0.5, n_estimators=400,\n                      n_jobs=1, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "RandomForestRegressor(max_depth=20, max_features=0.5, n_estimators=400,\n                      n_jobs=1, random_state=42)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__bootstrap": true,
+      "model__ccp_alpha": 0.0,
+      "model__criterion": "squared_error",
+      "model__max_depth": 20,
+      "model__max_features": 0.5,
+      "model__max_leaf_nodes": null,
+      "model__max_samples": null,
+      "model__min_impurity_decrease": 0.0,
+      "model__min_samples_leaf": 1,
+      "model__min_samples_split": 2,
+      "model__min_weight_fraction_leaf": 0.0,
+      "model__monotonic_cst": null,
+      "model__n_estimators": 400,
+      "model__n_jobs": 1,
+      "model__oob_score": false,
+      "model__random_state": 42,
+      "model__verbose": 0,
+      "model__warm_start": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "B",
+    "model": "Ridge",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "Ridge(alpha=np.float64(71.77141927992021))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "Ridge(alpha=np.float64(71.77141927992021))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__alpha": 71.77141927992021,
+      "model__copy_X": true,
+      "model__fit_intercept": true,
+      "model__max_iter": null,
+      "model__positive": false,
+      "model__random_state": null,
+      "model__solver": "auto",
+      "model__tol": 0.0001
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "B",
+    "model": "SVR",
+    "primary_validation_selected": true,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "SVR(C=np.float64(5.342937261279771), cache_size=512,\n    epsilon=np.float64(0.005265139631677754),\n    gamma=np.float64(0.0280163515871626))"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "SVR(C=np.float64(5.342937261279771), cache_size=512,\n    epsilon=np.float64(0.005265139631677754),\n    gamma=np.float64(0.0280163515871626))",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__C": 5.342937261279771,
+      "model__cache_size": 512,
+      "model__coef0": 0.0,
+      "model__degree": 3,
+      "model__epsilon": 0.005265139631677754,
+      "model__gamma": 0.0280163515871626,
+      "model__kernel": "rbf",
+      "model__max_iter": -1,
+      "model__shrinking": true,
+      "model__tol": 0.001,
+      "model__verbose": false
+    }
+  },
+  {
+    "analysis": "full",
+    "feature_set": "B",
+    "model": "XGBoost",
+    "primary_validation_selected": false,
+    "pipeline_parameters": {
+      "steps": [
+        [
+          "imputer",
+          "SimpleImputer(keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "constant_filter",
+          "VarianceThreshold()"
+        ],
+        [
+          "scaler",
+          "StandardScaler()"
+        ],
+        [
+          "shap_selector",
+          "TrainingFoldSHAPSelector()"
+        ],
+        [
+          "model",
+          "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=0.9, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.03573884768117847), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=3, max_leaves=None,\n             min_child_weight=3, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=400, n_jobs=1,\n             num_parallel_tree=None, ...)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "imputer": "SimpleImputer(keep_empty_features=True, strategy='median')",
+      "constant_filter": "VarianceThreshold()",
+      "scaler": "StandardScaler()",
+      "shap_selector": "TrainingFoldSHAPSelector()",
+      "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=0.9, device=None, early_stopping_rounds=None,\n             enable_categorical=True, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=np.float64(0.03573884768117847), max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=3, max_leaves=None,\n             min_child_weight=3, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=400, n_jobs=1,\n             num_parallel_tree=None, ...)",
+      "imputer__add_indicator": false,
+      "imputer__copy": true,
+      "imputer__fill_value": null,
+      "imputer__keep_empty_features": true,
+      "imputer__missing_values": NaN,
+      "imputer__strategy": "median",
+      "constant_filter__threshold": 0.0,
+      "scaler__copy": true,
+      "scaler__with_mean": true,
+      "scaler__with_std": true,
+      "shap_selector__max_depth": 12,
+      "shap_selector__max_explanation_rows": 300,
+      "shap_selector__min_samples_leaf": 2,
+      "shap_selector__n_estimators": 200,
+      "shap_selector__n_features": 30,
+      "shap_selector__n_jobs": 1,
+      "shap_selector__random_state": 42,
+      "model__objective": "reg:squarederror",
+      "model__base_score": null,
+      "model__booster": null,
+      "model__callbacks": null,
+      "model__colsample_bylevel": null,
+      "model__colsample_bynode": null,
+      "model__colsample_bytree": 0.9,
+      "model__device": null,
+      "model__early_stopping_rounds": null,
+      "model__enable_categorical": true,
+      "model__eval_metric": null,
+      "model__feature_types": null,
+      "model__feature_weights": null,
+      "model__gamma": null,
+      "model__grow_policy": null,
+      "model__importance_type": null,
+      "model__interaction_constraints": null,
+      "model__learning_rate": 0.03573884768117847,
+      "model__max_bin": null,
+      "model__max_cat_threshold": null,
+      "model__max_cat_to_onehot": null,
+      "model__max_delta_step": null,
+      "model__max_depth": 3,
+      "model__max_leaves": null,
+      "model__min_child_weight": 3,
+      "model__missing": NaN,
+      "model__monotone_constraints": null,
+      "model__multi_strategy": null,
+      "model__n_estimators": 400,
+      "model__n_jobs": 1,
+      "model__num_parallel_tree": null,
+      "model__random_state": 42,
+      "model__reg_alpha": null,
+      "model__reg_lambda": 0.1241480428274395,
+      "model__sampling_method": null,
+      "model__scale_pos_weight": null,
+      "model__subsample": 0.9,
+      "model__tree_method": "hist",
+      "model__validate_parameters": null,
+      "model__verbosity": 0
+    }
+  }
+]

@@ -1,0 +1,6 @@
+Analysis,Feature_set,Model,Method,Background_rows,Explained_rows,Explained_compositions,Selected_features,Maximum_additivity_error
+comparison,A,Ridge,"Linear SHAP, independent masker",50,100,41,30,1.7763568394002505e-15
+comparison,B,SVR,"Permutation SHAP, independent masker",50,100,41,30,6.217248937900877e-15
+comparison,C,XGBoost,"Tree SHAP, tree-path-dependent;background represented by fitting tree-path statistics",0,100,41,30,3.2035313779488206e-06
+full,A,SVR,"Permutation SHAP, independent masker",50,100,55,30,7.105427357601002e-15
+full,B,SVR,"Permutation SHAP, independent masker",50,100,55,30,6.217248937900877e-15

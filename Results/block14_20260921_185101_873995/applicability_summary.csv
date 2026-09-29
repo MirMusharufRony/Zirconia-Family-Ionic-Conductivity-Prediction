@@ -1,0 +1,6 @@
+Analysis,Feature_set,Development_rows,Distance_features,Reference_quantile,Heuristic_distance_threshold
+comparison,A,618,83,0.95,9.647990076468949
+comparison,B,618,85,0.95,9.69921464342422
+comparison,C,618,90,0.95,10.571196317513436
+full,A,1362,88,0.95,3.419741645498571
+full,B,1362,90,0.95,3.419741645498567

@@ -1,0 +1,91 @@
+rank,feature,mean_absolute_SHAP,selected
+1,temperature_K,1.2990951819409349,True
+2,sintering_temperature_K,0.12896218476476284,True
+3,phys_mean_dopant_valence,0.059926038343998726,True
+4,chem__MagpieData mean MeltingT,0.04321335366440152,True
+5,chem__MagpieData mean NdValence,0.039367105531811365,True
+6,chem__MagpieData avg_dev NdValence,0.03818064126602961,True
+7,chem__MagpieData avg_dev NValence,0.02954888312367194,True
+8,chem__MagpieData maximum GSvolume_pa,0.028249206467249433,True
+9,chem__MagpieData range GSvolume_pa,0.027706535366310004,True
+10,chem__MagpieData mean NdUnfilled,0.027234742160279747,True
+11,sintering_time_h,0.022327234185171692,True
+12,chem__MagpieData mean Electronegativity,0.02190129171252034,True
+13,chem__MagpieData avg_dev GSvolume_pa,0.018798054728244102,True
+14,phys_cation_radius_variance_A2,0.018522793831109875,True
+15,chem__MagpieData avg_dev MendeleevNumber,0.015494199261623527,True
+16,chem__MagpieData avg_dev NUnfilled,0.012308302859342634,True
+17,chem__MagpieData avg_dev Electronegativity,0.011924320053071587,True
+18,chem__MagpieData mean NUnfilled,0.01167051929338928,True
+19,chem__MagpieData mean NpUnfilled,0.011609879232540447,True
+20,chem__MagpieData mean GSvolume_pa,0.011024711242265183,True
+21,chem__MagpieData avg_dev NfValence,0.010558952794572595,True
+22,chem__MagpieData mean NfValence,0.010358475913428679,True
+23,phys_dopant_cation_fraction,0.009025101124936824,True
+24,chem__MagpieData mean NpValence,0.008994053547197949,True
+25,chem__MagpieData mean Row,0.008443960151920709,True
+26,chem__MagpieData avg_dev AtomicWeight,0.0074845763418685445,True
+27,chem__MagpieData mean Number,0.0067511466048339845,True
+28,chem__MagpieData mean AtomicWeight,0.006630973498186583,True
+29,chem__MagpieData mean NValence,0.00658308717846662,True
+30,chem__MagpieData mean CovalentRadius,0.006065372656451578,True
+31,chem__MagpieData avg_dev MeltingT,0.006045915556085157,False
+32,phys_nominal_vacancies_per_cation,0.006003002214818935,False
+33,chem__MagpieData minimum NsValence,0.005861875368911264,False
+34,chem__MagpieData avg_dev Number,0.005810286279138178,False
+35,chem__MagpieData mean NsValence,0.005672635188274976,False
+36,chem__MagpieData avg_dev NpUnfilled,0.005454908511536034,False
+37,chem__MagpieData avg_dev CovalentRadius,0.005274558686715086,False
+38,chem__MagpieData mean GSmagmom,0.005231785899569931,False
+39,chem__MagpieData avg_dev Row,0.005170862431154227,False
+40,chem__MagpieData avg_dev NpValence,0.005095873916516414,False
+41,chem__MagpieData avg_dev GSmagmom,0.004903708638226171,False
+42,chem__MagpieData mean MendeleevNumber,0.00474828079776739,False
+43,phys_radius_mismatch_A,0.004591112450751166,False
+44,chem__MagpieData mean Column,0.0041208584657757286,False
+45,chem__MagpieData mean NsUnfilled,0.003733709598995336,False
+46,chem__MagpieData maximum MeltingT,0.003614362356757026,False
+47,chem__MagpieData avg_dev Column,0.0035961594459682665,False
+48,chem__MagpieData avg_dev NsValence,0.002971825053022904,False
+49,chem__MagpieData maximum NsUnfilled,0.002697510203189359,False
+50,chem__MagpieData avg_dev NsUnfilled,0.002628418182296135,False
+51,chem__MagpieData range NsUnfilled,0.0025913157035626624,False
+52,chem__MagpieData range MeltingT,0.0025032445116467336,False
+53,chem__MagpieData maximum NdValence,0.0022971207546703984,False
+54,chem__MagpieData range NsValence,0.002212583565648946,False
+55,chem__MagpieData range NdValence,0.002109049282102877,False
+56,chem__MagpieData mean SpaceGroupNumber,0.002076320441876764,False
+57,chem__MagpieData avg_dev NdUnfilled,0.0020352005516626275,False
+58,chem__MagpieData avg_dev SpaceGroupNumber,0.001956683505921465,False
+59,chem__MagpieData maximum NfValence,0.0013224977058750491,False
+60,chem__MagpieData range SpaceGroupNumber,0.001006040827552284,False
+61,chem__MagpieData range NValence,0.0009526160734404199,False
+62,chem__MagpieData maximum Number,0.0009250472240406162,False
+63,chem__MagpieData range NfValence,0.0007696438185835112,False
+64,chem__MagpieData maximum AtomicWeight,0.0007610657531413406,False
+65,chem__MagpieData range GSmagmom,0.0006673000109762134,False
+66,chem__MagpieData maximum GSmagmom,0.0006019894295808628,False
+67,chem__MagpieData minimum NUnfilled,0.0005878962302871624,False
+68,chem__MagpieData maximum Row,0.0005690387071548131,False
+69,chem__MagpieData range AtomicWeight,0.0005459441637386828,False
+70,chem__MagpieData range Number,0.0005315129315862676,False
+71,chem__MagpieData maximum NValence,0.0004994585196115317,False
+72,chem__MagpieData range MendeleevNumber,0.00047434748607549953,False
+73,chem__MagpieData minimum MendeleevNumber,0.000436792281301133,False
+74,chem__MagpieData avg_dev NfUnfilled,0.0004311151490713753,False
+75,chem__MagpieData maximum NfUnfilled,0.00042734802395927687,False
+76,chem__MagpieData mean NfUnfilled,0.00032314155377264557,False
+77,chem__MagpieData maximum CovalentRadius,0.00028868382487130145,False
+78,chem__MagpieData range CovalentRadius,0.00027108346809175826,False
+79,chem__MagpieData maximum SpaceGroupNumber,0.00022765595343804754,False
+80,chem__MagpieData range NUnfilled,0.00021874750338949321,False
+81,chem__MagpieData minimum Electronegativity,0.00020281987761338837,False
+82,chem__MagpieData range NfUnfilled,0.0001354248995466962,False
+83,chem__MagpieData range Electronegativity,0.00010306675229591482,False
+84,chem__MagpieData maximum NUnfilled,0.00010284178235878377,False
+85,chem__MagpieData range Column,9.45765659771756e-05,False
+86,chem__MagpieData range Row,7.696084669170908e-05,False
+87,chem__MagpieData minimum NValence,3.6998190121458115e-05,False
+88,chem__MagpieData minimum Column,2.022704059343577e-05,False
+89,chem__MagpieData maximum NpUnfilled,1.3050195743397501e-05,False
+90,chem__MagpieData range NpUnfilled,6.435567955113581e-06,False

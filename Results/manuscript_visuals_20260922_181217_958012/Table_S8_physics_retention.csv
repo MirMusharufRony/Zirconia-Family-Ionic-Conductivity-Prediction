@@ -1,0 +1,6 @@
+Analysis,Feature_set,Model,Physics_feature,Status,Mean_absolute_SHAP_if_retained
+comparison,C,XGBoost,phys_dopant_cation_fraction,Retained,0.024808423957438208
+comparison,C,XGBoost,phys_mean_dopant_valence,Retained,0.0617471709754318
+comparison,C,XGBoost,phys_nominal_vacancies_per_cation,Not retained by SHAP selector,
+comparison,C,XGBoost,phys_radius_mismatch_A,Not retained by SHAP selector,
+comparison,C,XGBoost,phys_cation_radius_variance_A2,Retained,0.03434587483119685
