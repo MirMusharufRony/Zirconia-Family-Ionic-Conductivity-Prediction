@@ -20,7 +20,6 @@ This project investigates how three groups of descriptors contribute to conducti
 
 The principal objective is to quantify the additional predictive value of processing and physics-based information. A descriptor's importance to a fitted model and its ability to improve held-out predictions are evaluated separately. SHAP associations are interpreted as model explanations, not demonstrations of physical causality.
 
-This README describes the revised feature configuration. Numerical results, figures and candidate rankings from an earlier configuration must be regenerated and checked before they are attributed to this version.
 
 ## Research Questions
 
@@ -60,7 +59,7 @@ Sets A and B use the full dataset. A separate comparison evaluates **A, B and C 
 
 Coordination assignments of **CN5, CN6 and CN8** are used where supported by the source information. Spin state is not a model input. This does not make ionic radii independent of spin state: ambiguous radius assignments require review rather than arbitrary selection.
 
-Nominal vacancy estimates do not measure the concentration of mobile vacancies. Radius mismatch and radius variance are size descriptors, not experimental measurements of lattice distortion. Unsupported assignments remain missing. The precise equations, radius conventions and oxidation-state assumptions must accompany any reported results.
+Nominal vacancy estimates do not measure the concentration of mobile vacancies. Radius mismatch and radius variance are size descriptors, not experimental measurements of lattice distortion. Unsupported assignments remain missing. 
 
 ### Grouped Evaluation and Fold-Specific Selection
 
@@ -82,11 +81,10 @@ The current database contains:
 
 Conductivity values were compiled from published tables and digitized figures. Formula records, units and source identifiers support traceability. A measurement record is not necessarily an independent material or experiment: multiple rows can come from the same sample, composition or publication.
 
-The database is predominantly YSZ-related. Claims covering all stabilized-zirconia families require broader representative sampling. Bulk, grain-boundary and total ceramic conductivity are different quantities; retained differences in measurement definition and material form must be documented in the manuscript. Source linkage alone does not establish independent verification of every extracted value.
 
 **Grain size and relative density are excluded because of extensive missing data.** Their missing fractions in the inspected database were approximately **83.95%** and **64.33%**, respectively. Removing them reduces dependence on heavily imputed microstructure information but limits direct assessment of microstructural contributions.
 
-Activation energy is excluded from the predictors and is not a prediction target in this project. Phase information and source identifiers are metadata where available, rather than automatic model inputs.
+Activation energy is excluded from the predictors. Phase information and source identifiers are metadata where available, rather than automatic model inputs.
 
 ## Prediction Target
 
@@ -96,7 +94,7 @@ The regression target is:
 y = log10[σ / (S cm⁻¹)]
 ```
 
-MAE and RMSE are reported in log10 units; R² is dimensionless. R² should not be described as percentage prediction accuracy.
+MAE and RMSE are reported in log10 units; R² is dimensionless.
 
 Records with identical retained inputs but different conductivities cannot be individually distinguished by a deterministic regression model. This unresolved variation limits the interpretation and achievable precision of predictions.
 
@@ -133,7 +131,6 @@ flowchart TD
 | XGBoost | Regularized gradient-boosted trees |
 | Artificial neural network | Multilayer perceptron using scikit-learn's `MLPRegressor` |
 
-The ANN implementation does not require TensorFlow.
 
 ### Training, Validation and Test Partitions
 
@@ -144,7 +141,7 @@ The master split assigns composition groups to approximately 80% training, 10% v
 | Full dataset | 1,222 | 140 | 121 | 15 |
 | Common subset | 578 | 40 | 31 | 5 |
 
-These counts describe the existing split manifest and must be checked following a data revision. Composition grouping assesses transfer to held-out compositions; it does not establish transfer to unseen papers. All 39 full-data source identifiers occur in the training partition.
+Composition grouping assesses transfer to held-out compositions; it does not establish transfer to unseen papers. All 39 full-data source identifiers occur in the training partition.
 
 ### Hyperparameter Tuning
 
@@ -159,7 +156,7 @@ Inside each fold, the pipeline fits:
 
 Mean fold RMSE selects hyperparameters. Validation RMSE then identifies the primary model for each analysis and feature set. Frozen configurations are refitted on training plus validation data before test evaluation. The eight-model benchmark is reported separately from the validation-selected primary models.
 
-Tuning scores are selection statistics, not final independent test estimates. Original test outcomes have already been inspected; a revised analysis using the same test observations must disclose this history rather than describe those observations as newly untouched.
+Tuning scores are selection statistics, not final independent test estimates. Original test outcomes have already been inspected.
 
 ### Performance and Interpretation
 
@@ -169,7 +166,7 @@ With a fixed top-30 selection rule, adding descriptors can replace previously se
 
 SHAP bar plots summarize mean absolute attribution, while beeswarm plots show attribution direction and spread. Correlated features can redistribute attribution. A feature's absence from the selected set does not establish physical irrelevance.
 
-Optional high/low-conductivity analysis applies a predefined threshold to regression predictions. Confusion matrices, classification reports, precision, recall, F1, ROC curves and precision–recall curves supplement regression metrics. Predicted conductivity is a ranking score for these curves, not a calibrated class probability. PR AUC and average precision must be labelled according to the quantity actually computed.
+Optional high/low-conductivity analysis applies a predefined threshold to regression predictions. Confusion matrices, classification reports, precision, recall, F1, ROC curves and precision–recall curves supplement regression metrics. Predicted conductivity is a ranking score for these curves, not a calibrated class probability. 
 
 ## Uncertainty and Candidate Screening
 
@@ -177,9 +174,8 @@ Composition-level bootstrap resampling assesses variability in fitted prediction
 
 Candidate screening combines nominal Y/Sc zirconia compositions with specified processing schedules. The candidate inputs must match the fitted feature definitions. Full-data A and B pipelines support the screening, and model B provides the principal ranking. Descriptor-range and distance checks identify candidates outside the adopted applicability criteria.
 
-Candidate lists are computational proposals. They do not demonstrate phase stability, synthesis feasibility or experimentally confirmed improvement. A composition absent from this database is not necessarily new to the literature. Rankings must be regenerated after changing model inputs.
+Candidate lists are computational proposals. They do not demonstrate phase stability, synthesis feasibility or experimentally confirmed improvement. A composition absent from this database is not necessarily new to the literature. 
 
-Bayesian optimization and activation-energy prediction are outside the current scope.
 
 ## Getting Started
 
@@ -250,7 +246,6 @@ Keep outputs from distinct runs separate and preserve their configuration record
 
 The public repository alone cannot reproduce the numerical results without the matching input data. Reproduction also requires the composition identities, split manifest, descriptor assignments, dependency versions and run settings.
 
-Excluding a directory from Git does not remove it from earlier commits. It also does not remove measurement values embedded in prediction tables, feature exports, figures or cached files. Public outputs should be reviewed individually before release.
 
 ## Troubleshooting
 
@@ -288,9 +283,6 @@ This project is ongoing. A peer-reviewed paper citation and DOI are not yet supp
 
 Suggestions addressing implementation errors, descriptor definitions, validation and documentation are welcome through repository issues and pull requests. Explain the scientific motivation for methodological changes and keep private data out of contributions.
 
-## License
-
-A software license has not yet been specified in this documentation. Consult the repository's actual license file, if provided, for reuse terms. Data availability is separate from software licensing; the private datasets are not included in the code release.
 
 ## Acknowledgments
 
@@ -301,4 +293,4 @@ This work uses open-source scientific Python tools, including matminer, pymatgen
 **Md Mir Musharuf Hussain Rony**  
 B.Sc. in Mechanical Engineering, Rajshahi University of Engineering & Technology, Bangladesh.
 
-Questions about the implementation and research workflow can be raised through GitHub Issues once the repository is published.
+Questions about the implementation and research workflow can be raised through GitHub Issues.
